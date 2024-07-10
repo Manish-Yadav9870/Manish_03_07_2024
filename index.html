@@ -6,19 +6,109 @@
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
   </head>
+  <style>
+    #super_main_container{
+      border: 1px solid blue;
+      width: 98%;
+      margin: auto;
+    }
+    #main{
+      border: 1px solid red;
+      margin: auto;
+      width: 90%;
+      height: 80vh;
+      background-image: url(https://images.unsplash.com/photo-1548013146-72479768bada?fm=jpg&w=3000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dGFqJTIwbWFoYWx8ZW58MHx8MHx8fDA%3D);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    h1{
+      text-align: center;
+      color: rgb(20, 20, 20);
+      font-size: 60px;
+    }
+    p{
+      text-align: center;
+      font-size: xx-large;
+    }
+    label{
+      font-size: larger;
+    }
+    #form{
+      width: 100%;
+      text-align: center;
+    }
+    #name{
+      background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+    font-size: larger;
+      
+    }
+    #name:focus{
+      outline: none;
+      border-color: #ccc;
+    }
+    #email{
+      background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+    font-size: larger;
+    }
+    #email:focus{
+      outline: none;
+      border-color: #ccc;
+    }
+    #photo{
+      background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+    font-size: larger;
+    }
+    #photo:focus{
+      outline: none;
+      border-color: #ccc;
+    }
+    #btn{
+      background: transparent;
+      font-size: larger;
+    }
+    img{
+      width: 100px;
+    }
+    #next_h1{
+      font-size: xx-large;
+    }
+    #cont{
+      border: 1px solid red;
+      width: 100%;
+      display: grid;
+      grid-template-columns:repeat(4,1fr);
+    }
+    #Display_data{
+      border: 1px solid green;
+    }
+   
+   
+  </style>
   <body>
+    <div id="super_main_container">
     <div id="main">
+    <h1>Tajmahel Hotels Pvt.Ltd.</h1>
+      <p>Fot Better Future Please Register</p>
       <form id="form">
-        <label>Name:</label>
-        <input id="name" type="text" placeholder="Enter Your Name">
-        <label>Email:</label>
-        <input id="email" type="text" placeholder="Enter Your email">
+        <label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspName:</label>
+        <input id="name" type="text" required placeholder="Enter Your Name"><br><br>
+        <label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspEmail:</label>
+        <input id="email" type="text" required placeholder="Enter Your email"><br><br>
          <label>Image Url:</label>
-        <input id="photo" type="text" placeholder="Enter Your image url">
+        <input id="photo" type="text" required placeholder="Enter Your image url"><br><br>
         <button id="btn">Submit</button>
       </form>
     </div>
+    <h1 id="next_h1">Show Your Reults Here</h1>
     <div id="cont"></div>
+  </div>
+   
   </body>
   <script src="./index.js"></script>
 </html>

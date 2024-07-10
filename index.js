@@ -13,11 +13,14 @@ async function postdata() {
         email:document.getElementById("email").value,
         photo:document.getElementById("photo").value,
     };
+    if (obj.name==""||obj.email==""||obj.photo==""){
+        alert("Please fill all the fields")
+    }
     try{
         let res=await axios.post("https://renderserver-lnh1.onrender.com/userDetails",obj)
         alert("submitted");
-        getdata()
-        form.reset()
+        getdata();
+        form.reset();
         console.log(res.data);
     
     }
@@ -39,18 +42,19 @@ async function getdata() {
 getdata();
 async function deleteData(data){
     try{
-        let res=await axios.delete("https://renderserver-lnh1.onrender.com/userDetails/${data.id}");
+        let res=await axios.delete(`https://renderserver-lnh1.onrender.com/userDetails/${data.id}`);
         alert("deleted");
         getdata();
     }catch(error){
         console.log(error);
     }
 }
-btn.addEventListener("click",postdata);
+// btn.addEventListener("click",postdata);
 function displayData(data){
     cont.innerHTML=""
     data.map((ele) => {
         let div=document.createElement("div");
+        div.id="Display_data"
         let name=document.createElement("name");
         name.innerText=ele.name;
         let email=document.createElement("email");
@@ -81,21 +85,21 @@ function getDataforEdit(data){
     btn.innerText="update";
     state=true;
     currentid=data.id;
+    console.log(currentid);
 }
 async function updatedata(){
     let updateobj={
         name:document.getElementById("name").value,
         email:document.getElementById("email").value,
-        photo:document.getElementById("photo").value,
+        photo:document.getElementById("photo").value
     };
     try{
-        let res=await axios.patch(
-            'https://renderserver-lnh1.onrender.com/userDetails/${currentid}',
-            updateobj
-        );
+        let res=await axios.patch(`https://renderserver-lnh1.onrender.com/userDetails/${currentid}`,updateobj);
+        console.log(res);
         alert("updated");
         state=false;
     btn.innerText="Submit";
+    getdata();
         }catch(error){
             console.log(error);
     }
