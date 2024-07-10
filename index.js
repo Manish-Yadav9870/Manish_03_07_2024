@@ -57,9 +57,9 @@ function displayData(data){
         email.innerText=ele.email;
         let photo=document.createElement("img");
         photo.src=ele.photo;
-        let btn=document.createElement("button");
-        btn.innerText="edit";
-        btn.addEventListener("click",() => {
+        let editbtn=document.createElement("button");
+        editbtn.innerText="edit";
+        editbtn.addEventListener("click",() => {
             getDataforEdit(ele);
         });
         let del=document.createElement("button");
@@ -67,7 +67,7 @@ function displayData(data){
         del.addEventListener("click",() => {
             deleteData(ele);
     });
-    div.append(name,email,photo,btn,del);
+    div.append(name,email,photo,editbtn,del);
     cont.append(div);
  } );
 }
@@ -95,13 +95,14 @@ async function updatedata(){
         );
         alert("updated");
         state=false;
+    btn.innerText="Submit";
         }catch(error){
             console.log(error);
     }
 }
 btn.addEventListener("click", (e) =>{
     e.preventDefault();
-    if(state===true){
+    if(state){
         updatedata();
         }else{
             postdata();
