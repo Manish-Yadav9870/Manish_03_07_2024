@@ -1,0 +1,231 @@
+
+#super_main_container{
+  /* border: 1px solid blue; */
+  width: 98%;
+  margin: auto;
+  /* padding: 5px; */
+}
+#main{
+  /* border: 1px solid red; */
+  margin: auto;
+  width: 95%;
+  height: 40vh;
+  background-image: url(https://images.unsplash.com/photo-1548013146-72479768bada?fm=jpg&w=3000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dGFqJTIwbWFoYWx8ZW58MHx8MHx8fDA%3D);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  border-radius: 10px;
+}
+#main_h1{
+  text-align: center;
+  color:  rgb(14, 13, 13);
+  font-size: 40px;
+}
+p{
+  text-align: center;
+  font-size: xx-large;
+}
+label{
+  font-size: larger;
+}
+#form{
+  /* width: 50%; */
+  text-align: center;
+  padding-left: 200px;
+  /* border: 1px solid red; */
+}
+#name{
+  background: transparent;
+border: none;
+border-bottom: 1px solid #000000;
+font-size: larger;
+  
+}
+/* #name:focus{
+  outline: none;
+  border-color: #ccc;
+} */
+#email{
+  background: transparent;
+border: none;
+border-bottom: 1px solid #000000;
+font-size: larger;
+}
+/* #email:focus{
+  outline: none;
+  border-color: #ccc;
+} */
+#photo{
+  background: transparent;
+border: none;
+border-bottom: 1px solid #000000;
+font-size: larger;
+}
+/* #photo:focus{
+  outline: none;
+  border-color: #ccc;
+} */
+#btn{
+  background: transparent;
+  font-size: larger;
+  border:0.4 px solid white;
+  border-radius: 5px;
+  padding: 7px;
+}
+#btn:hover{
+  cursor: pointer;
+  background-color: rgb(106,59,45);
+  transition: all 1s ease-in-out;
+}
+img{
+  width: 200px;
+}
+#next_h1{
+  font-size: xx-large;
+  text-align: center;
+}
+
+
+#nav ul li{
+color: rgb(197, 189, 189);
+font-size: x-large;
+list-style: none;
+/* background: #e1e1e1; */
+
+}
+#nav ul li:hover{
+color: red;
+cursor: pointer;
+transition: all 1s ease-in-out;
+/* border-bottom: 1px solid red; */
+
+}
+#nav ul{
+display: grid;
+grid-template-rows:repeat(4,1fr);
+gap: 60px;
+
+}
+#nav{
+/* border: 1px solid white; */
+padding: 20px;
+
+}
+#footer{
+/* border: 1px solid white; */
+}
+#search_container{
+/* border:  1px solid white; */
+text-align: center;
+}
+#search_container label{
+*{
+
+  
+}
+body{
+/* display: flex; */
+align-items: center;
+justify-content: center;
+height: 100vh;
+margin: 0;
+padding: 0;
+background-color: white;
+}
+label{
+width: 80%;
+/* max-width: 300px; */
+}
+input{
+width: 90%;
+margin: auto;
+display: flex;
+padding: 15px;
+background-color: white;
+border: 1px solid black;
+color: #111;
+font-size: 20px;
+/* box-shadow: 3px 1px 0px 2px, 0px -1px 0px 2px rgba(0, 0, 0, 0.62); */
+/* height: 58px;   */
+background: transparent;
+border: none;
+border-bottom: 1px solid #000000;  
+
+}
+
+
+}
+#feedbackbtn{
+background: transparent;
+font-size: larger;
+border-radius: 5px;
+padding: 7px;
+}
+#feedbackbtn{
+background: transparent;
+font-size: large;
+
+}
+#feedbackbtn:hover{
+cursor: pointer;
+background-color:rgb(106,59,45); 
+transition: all 1s ease-in-out;
+}
+#cont{
+  /* border: 1px solid red; */
+  border-radius: 5px;
+  margin: auto;
+  width: 97%;
+  display: grid;
+  grid-template-columns:repeat(4,1fr);
+  gap: 20px;
+  /* padding: 10px; */
+}
+
+#Display_data{
+  border: 1px solid rgb(16 68 74);
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  display: grid;
+  border-radius: 30px 80px;
+  gap: 10px;
+  font-size: larger;
+  overflow: hidden;
+}
+#Display_data img{
+  width: 98%;
+  margin: auto;
+  border-radius: 30px 80px;
+  transition: all 1s ease-in-out;
+ 
+  
+}
+#Display_data img:hover{
+  cursor: pointer;
+  transform: scaleX(1.05);
+}
+#Display_data div{
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+  margin: auto;
+  padding: 8px;
+}
+#Display_data div button{
+border: 1px solid black;
+font-size: 17px;
+border-radius: 5px;
+  padding:5px;
+
+}
+#Display_data div button:hover{
+  cursor: pointer;
+  background-color:rgb(106,59,45);
+  transition: all 1s ease-in-out;
+
+}

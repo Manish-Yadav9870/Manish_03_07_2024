@@ -14,11 +14,13 @@ async function postdata() {
         photo:document.getElementById("photo").value,
     };
     if (obj.name==""||obj.email==""||obj.photo==""){
-        alert("Please fill all the fields")
+        alert("Please fill all the fields");
+        return
     }
     try{
-        let res=await axios.post("https://renderserver-lnh1.onrender.com/userDetails",obj)
-        alert("submitted");
+        let res=await axios.post("https://renderserver-lnh1.onrender.com/userDetails",obj);
+        alert("Submitted");
+      
         getdata();
         form.reset();
         console.log(res.data);
@@ -61,17 +63,21 @@ function displayData(data){
         email.innerText=ele.email;
         let photo=document.createElement("img");
         photo.src=ele.photo;
+        let btndiv=document.createElement("div")
+        btndiv.id=btndiv;
         let editbtn=document.createElement("button");
-        editbtn.innerText="edit";
+        editbtn.innerText="Edit";
         editbtn.addEventListener("click",() => {
             getDataforEdit(ele);
+            document.getElementById("form").scrollIntoView({behavior:"smooth"})
         });
         let del=document.createElement("button");
-        del.innerText="delete";
+        del.innerText="Delete";
         del.addEventListener("click",() => {
             deleteData(ele);
     });
-    div.append(name,email,photo,editbtn,del);
+    btndiv.append(editbtn,del);
+    div.append(photo,name,email,btndiv);
     cont.append(div);
  } );
 }
@@ -96,9 +102,11 @@ async function updatedata(){
     try{
         let res=await axios.patch(`https://renderserver-lnh1.onrender.com/userDetails/${currentid}`,updateobj);
         console.log(res);
-        alert("updated");
+        alert("Updated");
         state=false;
     btn.innerText="Submit";
+    form.reset();
+    
     getdata();
         }catch(error){
             console.log(error);
@@ -111,4 +119,16 @@ btn.addEventListener("click", (e) =>{
         }else{
             postdata();
         }
+});
+let feedbackbtn=document.getElementById("feedbackbtn");
+feedbackbtn.addEventListener("click",() => {
+function emptyfeedback(){
+    document.getElementById("feedback").value="";
+}
+if (feedback.value==""){
+    alert("Please fill all the fields")
+    return
+}else
+alert("Your Feedback Is Submitted");
+emptyfeedback();
 });
